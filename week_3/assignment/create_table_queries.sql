@@ -29,3 +29,6 @@ SELECT DISTINCT PULocationID FROM `zoomcamp-de-411412.green_2022.materialized`
   WHERE DATE(lpep_pickup_datetime) BETWEEN '2022-06-01' AND '2022-06-30'; -- 12.82MB
 SELECT DISTINCT PULocationID FROM `zoomcamp-de-411412.green_2022.partitioned_clustered`
   WHERE DATE(lpep_pickup_datetime) BETWEEN '2022-06-01' AND '2022-06-30'; -- 1.12MB
+
+-- Question 6
+-- GCP Bucket
