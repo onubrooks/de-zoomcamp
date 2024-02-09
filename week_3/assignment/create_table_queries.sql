@@ -1,11 +1,11 @@
-CREATE EXTERNAL TABLE `zoomcamp-de-411412.green_2022.external`
+CREATE OR REPLACE EXTERNAL TABLE `zoomcamp-de-411412.green_2022.external`
     -- WITH PARTITION COLUMNS
     OPTIONS (
         format = 'PARQUET',
         uris = ['gs://mage-zoomcamp-onubrooks/green_2022/*']
     );
 
-CREATE TABLE `zoomcamp-de-411412.green_2022.materialized` AS 
+CREATE OR REPLACE TABLE `zoomcamp-de-411412.green_2022.materialized` AS 
 SELECT * FROM `zoomcamp-de-411412.green_2022.external`;
 
 -- Question 1
@@ -19,7 +19,7 @@ SELECT COUNT(DISTINCT PULocationID) FROM `zoomcamp-de-411412.green_2022.material
 SELECT COUNT(*) FROM `zoomcamp-de-411412.green_2022.external` WHERE fare_amount = 0; -- 1622
 
 -- Question 4
-CREATE TABLE `zoomcamp-de-411412.green_2022.partitioned_clustered`
+CREATE OR REPLACE TABLE `zoomcamp-de-411412.green_2022.partitioned_clustered`
   PARTITION BY DATE(lpep_pickup_datetime)
   CLUSTER BY PULocationID 
   AS SELECT * FROM `zoomcamp-de-411412.green_2022.external`; -- Partition by lpep_pickup_datetime Cluster on PUlocationID
