@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Dispatching_base_num",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "The TLC base license number of the base that dispatched the taxicab."
+    },
+    {
+      "name": "Pickup_datetime",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "The date and time when the meter was engaged."
+    },
+    {
+      "name": "DropOff_datetime",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "The date and time when the meter was disengaged."
+    },
+    {
+      "name": "PULocationID",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "A code for the TLC taxi zone for the pickup location."
+    },
+    {
+      "name": "DOLocationID",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "A code for the TLC taxi zone for the dropoff location."
+    },
+    {
+      "name": "SR_Flag",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "This flag indicates whether the trip was a part of a shared ride."
+    }
+]
