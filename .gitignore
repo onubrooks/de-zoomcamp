@@ -161,3 +161,11 @@ cython_debug/
 
 ny_taxi_postgres_data
 .DS_Store
+/week_5/pyspark/creds
+/week_6/redpandas_example/green_tripdata_2019-10.csv.gz
+/week_5/data
+/week_5/pyspark/code/lib/gcs-connector-hadoop3-2.2.5.jar
+/week_5/pyspark/data
+/week_5/pyspark/tmp
+/week_5/pyspark/zones
+/week_5/pyspark/fhvhv_tripdata_2021-01.parquet
